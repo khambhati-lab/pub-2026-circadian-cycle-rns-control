@@ -1,0 +1,9 @@
+data:
+  NUMCHAN: 4  # number of channels on the device
+  FSAMPLING: 250 # sampling rate of the device in Hz
+stim:
+  remove_stim_artifacts: True  # if stimulation artifacts should be removed from data
+  NUMCHAN: ${data.NUMCHAN}  # number of channels; used in stimulation detection code
+  MIN_ARTIFACT_LENGTH: 10  # minimum number of successive constant samples to detect a stimulation
+  POST_STIM_BUFFER: 100  # number of samples to remove after stimulation ends
+  SIDE_CLIP_LEN: ${data.FSAMPLING} # number of samples to remove on either side of stim in filtered signal

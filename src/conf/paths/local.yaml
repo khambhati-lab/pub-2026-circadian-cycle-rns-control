@@ -1,0 +1,5 @@
+mount_path: data/RNSdata/NPEdata/     # root dir of data folders
+save_folder: data/processed/  # root dir of saved files
+df_catalog_path: ${.mount_path}%s/%s_ECoG_Catalog.csv   # catalog file. (%s, %s)%(patient_code, patient_code)
+ecog_folder_path: ${.mount_path}%s/%s_Data/         # ecog .dat files. (%s, %s)%(patient_code, patient_code)
+save_feature_path: ${.save_folder}ecogfeatures/%s/%s_trigger-%s.csv   # saved features. (%s, %s, %s)%(feature name, patient code, ecog trigger)
